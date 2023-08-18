@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #17a2b8;
+	background-image: linear-gradient(to bottom right, #17a2b8, #29a548);
+	min-height: 100vh;
+	height: 100%;
+}
+#mainContainer{
+	margin: 150px;
+	margin-top: 30px;
+}
+#backArrow{
+	margin-left: 40px;
+	margin-top: 40px;
+	width: 30px;
+	height: 30px;
+}

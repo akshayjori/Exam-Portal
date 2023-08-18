@@ -1,0 +1,63 @@
+@charset "ISO-8859-1";
+
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 50px;
+	background-color: #17a2b8;
+	height: 100%;
+}
+
+.heading {
+	width: 100hv;
+	margin-bottom: 60px;
+	position: relative;
+}
+
+table {
+	text-align: right;
+}
+
+td {
+	text-align: right;
+	padding: 20px;
+}
+
+span {
+	font-weight: bold;
+	font-size: 17px;
+	color: #15454f;
+}
+
+.btn {
+	font-weight: bold;
+	width: 300px;
+	height: 100px;
+	background: linear-gradient(to bottom right, #aae1ff, #ffffff);
+	border-radius: 100px;
+    overflow: hidden;
+    perspective: 1px;
+}
+
+.button {
+	color: dark;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.leftSide {
+	text-align: center;
+}
+
+.rightSide {
+	padding-left: 50px;
+}
+
+#adminIcon {
+	margin: 20px;
+	color: white;
+	font-size: 100px;
+}
+.gr{
+	padding-right: 190px;
+}

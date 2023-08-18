@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+	padding: 50px;
+	background-color: #17a2b8;
+	background-image: linear-gradient(to bottom right, #17a2b8, #29a548);
+	min-height: 100vh;
+	height:100%;
+	margin-bottom: 40px;
+}
+
+#mainContainer {
+	margin: 50px;
+}
+
+.heading{
+	color: #0e2c32;
+	margin-bottom: 30px;
+}
+
+th{
+	color: #0e2c32;
+}
+table {
+	font-size: 20px;
+	color: white;
+}
