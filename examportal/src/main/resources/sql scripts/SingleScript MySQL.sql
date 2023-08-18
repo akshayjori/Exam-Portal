@@ -44,25 +44,6 @@ values('SQLL1', 'SQL Leval 1', 'SQL', 'Low');
 insert into examDetails
 values('SQLL3', 'SQL Leval 3', 'SQL', 'Hard');
 
-
-create table ExamAttempts(
-attemptId int,
-examCode varchar(10),
-userId int,
-questionId int,
-answer varchar(1),
-marks int,
-response varchar(1),
-responseStatus varchar(20),
-isCorrect boolean,
-attemptDate date,
-score int,
-foreign key(examcode) references ExamDetails(examCode) ON DELETE CASCADE,
-foreign key(userId) references User(userId) ON DELETE CASCADE,
-foreign key(questionId) references QuestionPool(questionId) ON DELETE CASCADE
-);
-
-
 create table subjects(
 subjectId int primary key auto_increment,
 subjectName varchar(20) not null);
@@ -95,8 +76,8 @@ notified boolean default false
 
 
 create table QuestionPool(
-questionId int primary key auto_increment,
-question varchar(1000) not null unique,
+questionId int auto_increment primary key,
+question varchar(700) not null unique,
 optionA varchar(200) not null,
 optionB varchar(200) not null,
 optionC varchar(200) not null,
@@ -236,3 +217,21 @@ insert into QuestionPool(question, optionA, optionB, optionC, optionD, answer, c
  values ('This is SQL question4 of competency Low and ans D?', 'option A', 'option B', 'option C', 'option D', 'D', 'Low', 1, 'SQL');
 insert into QuestionPool(question, optionA, optionB, optionC, optionD, answer, competency, marks, subject) 
  values ('This is SQL question5 of competency Hard and ans C?', 'option A', 'option B', 'option C', 'option D', 'C', 'Hard', 3, 'SQL');
+ 
+ 
+create table ExamAttempts(
+attemptId int,
+examCode varchar(10),
+userId int,
+questionId int,
+answer varchar(1),
+marks int,
+response varchar(1),
+responseStatus varchar(20),
+isCorrect boolean,
+attemptDate date,
+score int,
+foreign key(examcode) references ExamDetails(examCode) ON DELETE CASCADE,
+foreign key(userId) references User(userId) ON DELETE CASCADE,
+foreign key(questionId) references QuestionPool(questionId) ON DELETE CASCADE
+);
